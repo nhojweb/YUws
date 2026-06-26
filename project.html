@@ -1,0 +1,242 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#ff6b81);
+    background-size:400% 400%;
+    animation: gradientBG 12s ease infinite;
+    min-height:100vh;
+}
+
+/* background animation */
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* fade */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* float */
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+/* NAV */
+nav{
+    background:rgba(255,255,255,0.95);
+    padding:18px;
+    text-align:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.15);
+    backdrop-filter:blur(10px);
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin:0 20px;
+    font-weight:bold;
+    position:relative;
+    transition:.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:3px;
+    background:#ff6b81;
+    left:0;
+    bottom:-5px;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#ff6b81;
+}
+
+/* MAIN LAYOUT */
+.main-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:40px;
+    padding:60px;
+    flex-wrap:wrap;
+}
+
+/* PROFILE LEFT */
+.profile-box{
+    position:relative;
+    animation:fadeUp 1s ease;
+}
+
+.profile-pic{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #ff6b81;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    animation:float 4s ease-in-out infinite;
+    transition:.3s;
+}
+
+.profile-pic:hover{
+    transform:scale(1.08);
+}
+
+/* plus badge */
+.plus{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    width:40px;
+    height:40px;
+    background:#ff6b81;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.plus:hover{
+    transform:rotate(90deg) scale(1.2);
+}
+
+/* HERO CARD */
+.container{
+    flex:1;
+    text-align:center;
+}
+
+.card{
+    background:rgba(255,255,255,0.95);
+    color:#333;
+    width:100%;
+    max-width:650px;
+    margin:auto;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    backdrop-filter:blur(15px);
+    animation:fadeUp 1.2s ease, float 4s ease-in-out infinite;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.03);
+}
+
+/* TITLE */
+h1{
+    margin-bottom:20px;
+    font-size:2.5rem;
+    color:#ff6b81;
+}
+
+p{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+/* IMAGE GALLERY */
+.image-gallery{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:40px;
+}
+
+.image-gallery img{
+    width:280px;
+    max-width:90%;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    transition:.4s;
+}
+
+.image-gallery img:hover{
+    transform:scale(1.05) rotate(1deg);
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+    .main-wrapper{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="project.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="mytravels.html">My Travels</a>
+</nav>
+
+<!-- PROFILE LEFT + CONTENT -->
+<div class="main-wrapper">
+
+    <!-- PROFILE -->
+    <div class="profile-box">
+        <img src="img/gwapo.jfif" class="profile-pic">
+        <div class="plus">🎧</div>
+    </div>
+
+    <!-- CARD -->
+    <div class="container">
+        <div class="card">
+            <style></style>
+            <h1>Welcome to My Website 👩🏻‍💻  </h1>
+            <p>
+                Hello I am John Mondejar! This is my personal website where I share information about myself and my travel adventures.
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- GALLERY -->
+<div class="image-gallery">
+
+    <img src="img/JM.jpg">
+    <img src="img/achi.jfif">
+    <img src="img/tour.jpg">
+    
+
+</div>
+
+</body>
+</html>

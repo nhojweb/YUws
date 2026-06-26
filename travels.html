@@ -1,0 +1,149 @@
+<html>
+<head>
+	
+	<title>MY TRAVELS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#ff6b81);
+    background-size:400% 400%;
+    animation: gradientBG 12s ease infinite;
+    min-height:100vh;
+}
+
+/* Background animation */
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Fade animation */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Floating animation */
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+/* Travel card */
+.travel-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:40px;
+}
+
+.travel-card{
+    background:rgba(255,255,255,0.95);
+    width:260px;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    text-decoration:none;
+    color:#333;
+    animation:fadeUp 1s ease, float 4s ease-in-out infinite;
+    transition:.4s;
+    backdrop-filter:blur(15px);
+}
+
+.travel-card:hover{
+    transform:translateY(-12px) scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.travel-card h2{
+    color:#ff6b81;
+}
+
+/* Title */
+h1{
+    text-align:center;
+    margin:40px 0 20px;
+    color:white;
+    font-size:3rem;
+    animation:fadeUp 1s ease;
+    letter-spacing:2px;
+}
+
+/* Image section */
+.image-gallery{
+    text-align:center;
+    padding:30px;
+}
+
+.image-gallery img{
+    width:450px;
+    max-width:90%;
+    margin:15px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    transition:.4s;
+    animation:fadeUp 1.2s ease;
+}
+
+.image-gallery img:hover{
+    transform:scale(1.05) rotate(1deg);
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+}
+</style>
+
+</head>	
+
+<body>
+
+<div class="travel-container">
+
+    <a href="mytravels.html" class="travel-card">
+        <h2>🏝 Beach</h2>
+        <p>Relaxing by the sea and enjoying beautiful sunsets.</p>
+    </a>
+
+</div>
+
+<div style="text-align:center;">
+    <style>
+        h1{
+            font-size: 30px;
+        }
+
+
+    </style>
+
+    <h1>The beach is a peaceful place where the sea meets the land.<br>
+I love going to the beach because it makes me feel calm and happy.<br>
+The sound of the waves and the fresh air help me relax.<br>
+I enjoy watching the sunset as the sky turns beautiful colors.<br>
+The beach is also a great place to have fun, swim, and spend time with friends and family.</h1>
+</div>
+
+<div class="image-gallery">
+
+    <img src="img/view.jfif">
+    <img src="img/be.jfif">
+    <img src="img/wew.jfif">
+
+</div>
+
+</body>
+</html>

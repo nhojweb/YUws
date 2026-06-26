@@ -1,0 +1,152 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(-45deg,#667eea,#764ba2,#6a11cb,#2575fc);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    min-height:100vh;
+}
+
+/* Animated Background */
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Fade Animation */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Floating Effect */
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+nav{
+    background:rgba(255,255,255,0.95);
+    padding:18px;
+    text-align:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.15);
+    backdrop-filter:blur(10px);
+}
+
+nav a{
+    text-decoration:none;
+    margin:0 20px;
+    color:#333;
+    font-weight:bold;
+    position:relative;
+    transition:.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:3px;
+    background:#667eea;
+    left:0;
+    bottom:-5px;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#667eea;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+    padding:20px;
+    animation:fadeUp 1s ease;
+}
+
+.card{
+    background:rgba(255,255,255,0.95);
+    width:80%;
+    max-width:700px;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    backdrop-filter:blur(15px);
+    animation:fadeUp 1.2s ease, float 4s ease-in-out infinite;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#667eea;
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+p{
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#444;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="project.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="mytravels.html">My Travels</a>
+</nav>
+
+
+<div class="container">
+    <div class="card">
+        <h1>About Me ⚔⛩️🌸</h1>
+        <p>Hi! I am a student who loves coding and learning new things.
+I enjoy exploring different places and experiencing new adventures.
+I created this website to share my travels and memories.
+I like taking photos of beautiful views, especially beaches and nature.
+My goal is to improve my skills in web design and programming.
+<br>
+<br>
+My hobbies include listening to music, playing games, playing basketball, and reading books.
+I also like taking photos of beautiful views, especially beaches and nature.
+I created this website to share my travels and experiences.
+My dream is to become successful and improve my skills in technology and web development.</p>
+    </div>
+</div>
+
+</body>
+</html>
